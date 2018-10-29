@@ -22,7 +22,7 @@ void JogoConsole::setPossuiMultiplayer(bool x){
     possuiMultiplayer = x;
 }
 void JogoConsole::imprimeInfoJogo (void){
-    cout << "Nome (Console) " << nome << "  Genero: "<< getGenero()->getNome() << "  Valor: " << getValor() << "  Multiplayer: "<< this->possuiMultiplayer << endl;
+    cout << "Nome (Console) " << nome << "  Genero: "<< getGenero()->getNome() << "  Valor: " << getValor() << "  Multiplayer: "<< this->possuiMultiplayer << endl << this->getId() << endl;
 }
 float JogoConsole::getValorPromocao(){
     if(emPromocao==true){

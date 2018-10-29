@@ -23,7 +23,7 @@ void JogoPC::setEspacoDiscoReq(float espaco){
     this->espacoDiscoRequerido = espaco;
 }
 void JogoPC::imprimeInfoJogo(){
-    cout << "Nome (PC): " << nome << "  Genero: " << getGenero()->getNome() << "  Valor: " << getValor() << "  Espaco em Disco Requerido: " << this->getEspacoDiscoReq() << endl;
+    cout << "Nome (PC): " << nome << "  Genero: " << getGenero()->getNome() << "  Valor: " << getValor() << "  Espaco em Disco Requerido: " << this->getEspacoDiscoReq() << endl << this->getId() << endl;
 }
 
 float JogoPC::getValorPromocao(){

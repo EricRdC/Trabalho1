@@ -28,11 +28,12 @@ protected:
 string nome;
 float valor;
 bool emPromocao;
+int id;
 
 public:
- Jogo();
- Jogo(string _nome, float _valor, string _gen);
- ~Jogo();
+Jogo();
+Jogo(string _nome, float _valor, string _gen);
+~Jogo();
  string getNome();
  static int qtdJogos;
  void setNome(string _nome);
@@ -45,6 +46,8 @@ public:
  virtual float getValorPromocao() = 0;
  bool getEmPromocao (void);
  void setEmPromocao (bool p);
+ int getId();
+ void setId(int id);
  friend void PresenteVirtual(PlataformaDigital* platj1, PlataformaDigital* platj2, Jogo* presente);
 };
 #endif // _JOGO_H
