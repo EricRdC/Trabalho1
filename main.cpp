@@ -42,7 +42,24 @@ void presenteVirtual(PlataformaDigital *platj1, PlataformaDigital *platj2, Jogo 
                     cout << "Jogo presenteado com sucesso!" << endl;
               }
                 }
-
+int selecionarEmpresa(){
+                int select;
+                cout << "Selecione a empresa desenvolvedora:" << endl << "1. Riot Games" << endl << "2. Valve" << endl << "3. Electronic Arts" << endl;
+                cin >> select;
+                while ((select < 1) || (select > 3)){
+                cout << "Digite uma empresa nas opcoes de 1 a 3" << endl;
+                cin >> select
+                return select;
+                }
+int selecionarPlataformaDig(){
+                int select;
+                cout << "Selecione a plataforma digital:" << endl << "1. Steam" << endl << "2. Origin" << endl << "3. BattleNet" << endl;
+                cin >> select;
+                while ((select < 1) || (select > 3)){
+                cout << "Digite uma plataforma digital nas opcoes de 1 a 3" << endl;
+                cin >> select;
+                return select;
+}
 int main(){
 PlataformaDigital *Steam, *Origin, *BattleNet, *Steam2, *Origin2, *BattleNet2;
 EmpresaDesenvolvedora *RiotGames, *Valve, *EA;
@@ -80,12 +97,7 @@ do{
             cin >> plat;
             while ((plat < 1) || (plat > 2))
             cout << "Digite uma plataforma nas opcoes 1 e 2" << endl;
-            cout << "Selecione a empresa desenvolvedora:" << endl << "1. Riot Games" << endl << "2. Valve" << endl << "3. Electronic Arts" << endl;
-            cin >> select;
-            while ((select < 1) || (select > 3)){
-            cout << "Digite uma empresa nas opcoes de 1 a 3" << endl;
-            cin >> select;
-            }
+            selecionarEmpresa();
             if (select == 1)
             RiotGames -> criarJogo(plat);
             if (select == 2)
@@ -96,12 +108,7 @@ do{
             limpatela();
             break;
         case 2:
-            cout << "Selecione a empresa desenvolvedora:" << endl << "1. Riot Games" << endl << "2. Valve" << endl << "3. Electronic Arts" << endl;
-                cin >> select;
-                while ((select < 1) || (select > 3)){
-                cout << "Digite uma empresa nas opcoes de 1 a 3" << endl;
-                cin >> select;
-                }
+                int selecionarEmpresa();
                 if (select == 1)
                 RiotGames -> colocarJogoPromocao();
                 else if (select == 2)
@@ -112,11 +119,7 @@ do{
             limpatela();
             break;
         case 3:
-            cout << "Selecione a empresa desenvolvedora:" << endl << "1. Riot Games" << endl << "2. Valve" << endl << "3. Electronic Arts" << endl;
-                cin >> select;
-                while ((select < 1) || (select > 3)){
-                cout << "Digite uma empresa nas opcoes de 1 a 3" << endl;
-                cin >> select;
+                int selecionarEmpresa();
                 }
                 if (select == 1){
                     if(RiotGames -> jogosDesenvolvidos.size() == 0){
@@ -125,12 +128,7 @@ do{
                     limpatela();
                     break;
                     }
-                    cout << "Selecione a plataforma digital:" << endl << "1. Steam" << endl << "2. Origin" << endl << "3. BattleNet" << endl;
-                    cin >> select;
-                    while ((select < 1) || (select > 3)){
-                    cout << "Digite uma plataforma digital nas opcoes de 1 a 3" << endl;
-                    cin >> select;
-                    }
+                    selecionarPlataformaDig();
                     if(select == 1){
                     cout << "Selecione o jogo que deseja comprar:" << endl;
                     for(i=0; i < RiotGames -> jogosDesenvolvidos.size(); i++){
@@ -178,12 +176,7 @@ do{
                         limpatela();
                         break;
                     }
-                    cout << "Selecione a plataforma digital:" << endl << "1. Steam" << endl << "2. Origin" << endl << "3. BattleNet" << endl;
-                    cin >> select;
-                    while ((select < 1) || (select > 3)){
-                    cout << "Digite uma plataforma digital nas opcoes de 1 a 3" << endl;
-                    cin >> select;
-                    }
+                    selecionarPlataformaDig();
                     if(select == 1){
                     cout << "Selecione o jogo que deseja comprar:" << endl;
                     for(i=0; i < Valve -> jogosDesenvolvidos.size(); i++){
@@ -231,12 +224,7 @@ do{
                         limpatela();
                         break;
                     }
-                    cout << "Selecione a plataforma digital:" << endl << "1. Steam" << endl << "2. Origin" << endl << "3. BattleNet" << endl;
-                    cin >> select;
-                    while ((select < 1) || (select > 3)){
-                    cout << "Digite uma plataforma digital nas opcoes de 1 a 3" << endl;
-                    cin >> select;
-                    }
+                    selecionarPlataformaDig();
                     if(select == 1){
                     cout << "Selecione o jogo que deseja comprar:" << endl;
                     for(i=0; i < EA -> jogosDesenvolvidos.size(); i++){
@@ -281,12 +269,7 @@ do{
             limpatela();
             break;
         case 4:
-            cout << "Selecione a plataforma digital:" << endl << "1. Steam" << endl << "2. Origin" << endl << "3. BattleNet" << endl;
-            cin >> select;
-            while ((select < 1) || (select > 3)){
-            cout << "Digite uma plataforma digital nas opcoes de 1 a 3" << endl;
-            cin >> select;
-            }
+            selecionarPlataformaDig();
             if (select == 1){
             cout << endl << "Insira a quantidade de creditos que deseja colocar em sua Carteira Digital: " << endl;
             cin >> select;
@@ -306,12 +289,7 @@ do{
             limpatela();
             break;
         case 5:
-            cout << "Selecione a plataforma digital:" << endl << "1. Steam" << endl << "2. Origin" << endl << "3. BattleNet" << endl;
-            cin >> select;
-            while ((select < 1) || (select > 3)){
-            cout << "Digite uma plataforma digital nas opcoes de 1 a 3" << endl;
-            cin >> select;
-            }
+            selecionarPlataformaDig();
             if (select == 1)
             Steam -> instalarJogo();
             else if (select == 2)
@@ -322,12 +300,7 @@ do{
             limpatela();
             break;
         case 6:
-            cout << "Selecione a plataforma digital:" << endl << "1. Steam" << endl << "2. Origin" << endl << "3. BattleNet" << endl;
-            cin >> select;
-            while ((select < 1) || (select > 3)){
-            cout << "Digite uma plataforma digital nas opcoes de 1 a 3" << endl;
-            cin >> select;
-            }
+            selecionarPlataformaDig();
             if (select == 1)
             Steam -> desinstalarJogo();
             else if (select == 2)
@@ -338,12 +311,7 @@ do{
             limpatela();
             break;
         case 7:
-            cout << "Selecione a plataforma digital:" << endl << "1. Steam" << endl << "2. Origin" << endl << "3. BattleNet" << endl;
-            cin >> select;
-            while ((select < 1) || (select > 3)){
-            cout << "Digite uma plataforma digital nas opcoes de 1 a 3" << endl;
-            cin >> select;
-            }
+            selecionarPlataformaDig();
             if (select == 1)
             Steam -> imprimeJogosCadastrados();
             else if (select == 2)
@@ -354,12 +322,7 @@ do{
             limpatela();
             break;
         case 8:
-            cout << "Selecione a plataforma digital:" << endl << "1. Steam" << endl << "2. Origin" << endl << "3. BattleNet" << endl;
-            cin >> select;
-            while ((select < 1) || (select > 3)){
-            cout << "Digite uma plataforma digital nas opcoes de 1 a 3" << endl;
-            cin >> select;
-            }
+            selecionarPlataformaDig();
             if (select == 1)
             Steam -> imprimeJogosInstalados();
             else if (select == 2)
@@ -370,12 +333,7 @@ do{
             limpatela();
             break;
         case 9:
-            cout << "Selecione a plataforma digital:" << endl << "1. Steam" << endl << "2. Origin" << endl << "3. BattleNet" << endl;
-            cin >> select;
-            while ((select < 1) || (select > 3)){
-            cout << "Digite uma plataforma digital nas opcoes de 1 a 3" << endl;
-            cin >> select;
-            }
+            selecionarPlataformaDig();
             cout << "Digite o genero desejado: " << endl;;
             cin >> nomegen;
             if (select == 1)
