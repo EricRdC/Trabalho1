@@ -19,13 +19,6 @@ Jogo::Genero::Genero(string _nome){
     this->nome = _nome;
 }
 
-Jogo::Jogo(string _nome, float _valor, string _gen){
-    this->nome = _nome;
-    this->valor = _valor;
-    this-> g = new Genero(_gen);
-    this->emPromocao = false;
-    qtdJogos++;
-}
 
 Jogo::~Jogo(){
     qtdJogos--;
@@ -74,4 +67,21 @@ bool Jogo::getEmPromocao(void){
 void Jogo::setEmPromocao(bool p)
 {
     this->emPromocao = p;
+}
+
+int Jogo::getId(){
+    return this -> id;
+}
+
+void Jogo::setId(int id){
+    this->id = qtdJogos;
+}
+
+Jogo::Jogo(string _nome, float _valor, string _gen){
+    this->nome = _nome;
+    this->valor = _valor;
+    this-> g = new Genero(_gen);
+    this->emPromocao = false;
+    qtdJogos++;
+    this->setId(id);
 }
